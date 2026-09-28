@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Essence Oral — Clínica Odontológica</title>
-<meta name="description" content="Essence Oral: clínica odontológica com atendimento humanizado. Agende sua avaliação pelo WhatsApp.">
+<title>Essence Oral — Odontologia Humanizada</title>
+<meta name="description" content="Essence Oral: clínica odontológica com atendimento humanizado. Responsável técnica: Dra. Elane Cardoso — CRO-BA 5558. Agende sua avaliação pelo WhatsApp.">
 <meta name="theme-color" content="#0f3d46">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,7 @@ svg{display:block}a{color:inherit;text-decoration:none}
 .btn--wa{background:var(--wa);color:#fff;box-shadow:0 12px 28px rgba(37,211,102,.35)}
 .btn--wa:hover{background:#1ebe5a}
 .btn--ghost{background:#fff;color:var(--deep);border:2px solid rgba(15,61,70,.12)}
+.btn--ghost:hover{border-color:var(--teal);color:var(--teal)}
 .btn svg{width:20px;height:20px;flex-shrink:0}
 .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
 h1,h2,h3{line-height:1.15;color:var(--deep);letter-spacing:-.02em}
@@ -40,6 +41,10 @@ section{padding:clamp(64px,9vw,110px) 0}
 .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 .burger span{display:block;width:24px;height:2px;background:var(--deep);margin:5px auto;border-radius:2px}
 @media(max-width:860px){.nav{position:fixed;inset:72px 0 auto;flex-direction:column;gap:0;background:#fff;padding:10px 20px 20px;box-shadow:var(--shadow);transform:translateY(-130%);transition:transform .35s}.nav a{padding:14px 0;border-bottom:1px solid #eef3f4}.nav.open{transform:none}.burger{display:block}.hdr .btn--wa{display:none}}
+/* fotos */
+.photo{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:linear-gradient(135deg,var(--mint),#c9efe8)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .4s,transform .6s}
+.photo img.off{opacity:0}
 /* hero */
 .hero{padding:clamp(40px,7vw,90px) 0 clamp(60px,8vw,100px);background:radial-gradient(90% 80% at 85% 20%,var(--mint) 0%,transparent 60%),linear-gradient(180deg,var(--mint2),#fff)}
 .hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,70px);align-items:center}
@@ -51,8 +56,7 @@ section{padding:clamp(64px,9vw,110px) 0}
 .trust span{display:flex;align-items:center;gap:8px}
 .trust i{width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block}
 .hero__media{position:relative}
-.art{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:var(--mint)}
-.art svg{width:100%;height:auto}
+.hero__media .photo{aspect-ratio:4/5}
 .float{position:absolute;background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:14px 18px;display:flex;align-items:center;gap:12px;font-size:.88rem;font-weight:700;color:var(--deep);animation:bob 5s ease-in-out infinite}
 .float small{display:block;font-weight:500;color:var(--muted)}
 .float--a{left:-22px;bottom:40px}.float--b{right:-16px;top:34px;animation-delay:-2.5s}
@@ -72,20 +76,42 @@ section{padding:clamp(64px,9vw,110px) 0}
 /* sobre */
 .sobre{background:var(--sand)}
 .sobre__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.sobre__grid .photo{aspect-ratio:4/5}
 .checks{list-style:none;margin-top:24px;display:grid;gap:12px}
 .checks li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
 .checks li::before{content:"";flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/14px no-repeat;margin-top:2px}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
-.gal .art{border-radius:18px}
-@media(max-width:860px){.sobre__grid{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}}
-/* diferenciais + nota google */
+/* responsável técnica */
+.rt{margin-top:28px;display:flex;align-items:center;gap:16px;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 10px 30px rgba(15,61,70,.08);flex-wrap:wrap}
+.rt__av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--deep));color:#fff;font-weight:800;font-size:1.1rem;display:grid;place-items:center;flex-shrink:0}
+.rt__txt{flex:1;min-width:180px}
+.rt__txt small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.rt__txt strong{display:block;color:var(--deep);font-size:1.08rem}
+.rt__txt span{color:var(--muted);font-size:.9rem}
+.rt .btn{padding:10px 18px;font-size:.9rem}
+/* galeria */
+.gal__head{margin-top:clamp(50px,7vw,80px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.gal__head h3{font-size:clamp(1.3rem,2.6vw,1.7rem)}
+.gal__head p{color:var(--muted);font-size:.95rem}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.gal button{aspect-ratio:3/4;border:0;padding:0;cursor:zoom-in;border-radius:18px;font:inherit}
+.gal button:hover img{transform:scale(1.04)}
+.gal button:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+@media(max-width:860px){.sobre__grid{grid-template-columns:1fr}.gal{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.gal button{scroll-snap-align:start}}
+/* lightbox */
+.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;margin:auto;overflow:visible}
+.lb::backdrop{background:rgba(8,30,35,.88)}
+.lb img{display:block;max-width:92vw;max-height:88vh;border-radius:16px}
+.lb__x{position:absolute;top:-14px;right:-14px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--deep);font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:var(--shadow)}
+/* diferenciais + avaliações */
 .dif{background:linear-gradient(180deg,#fff,var(--mint2))}
-.gcard{margin:46px auto 0;max-width:620px;background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:30px;display:flex;align-items:center;gap:22px;text-align:left;flex-wrap:wrap}
-.gcard__logo{width:60px;height:60px;border-radius:16px;background:var(--mint2);display:grid;place-items:center;flex-shrink:0}
+.gwrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:960px;margin:46px auto 0}
+.gcard{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:30px;display:flex;flex-direction:column;align-items:flex-start;gap:16px;text-align:left}
+.gcard__logo{width:60px;height:60px;border-radius:16px;background:var(--mint2);display:grid;place-items:center;flex-shrink:0;color:var(--teal)}
 .gcard__logo svg{width:32px;height:32px}
-.gcard div{flex:1;min-width:200px}
 .gcard strong{display:block;color:var(--deep);font-size:1.1rem}
 .gcard span{color:var(--muted);font-size:.95rem}
+.gcard .btn{margin-top:auto}
+@media(max-width:760px){.gwrap{grid-template-columns:1fr}}
 /* passos */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px;counter-reset:s;text-align:left}
 .step{background:#fff;border-radius:var(--r);padding:30px 26px;border:1px solid #e6f0f1}
@@ -104,9 +130,10 @@ section{padding:clamp(64px,9vw,110px) 0}
 .contato h2{color:#fff}.contato .lede{color:rgba(230,244,243,.75)}.contato .eyebrow{color:#7fe0d6}
 .contato__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,60px);align-items:start}
 .info{display:grid;gap:18px;margin-top:30px}
-.info div{display:flex;gap:14px;align-items:flex-start}
+.info>div{display:flex;gap:14px;align-items:flex-start}
 .info svg{width:24px;height:24px;flex-shrink:0;color:#7fe0d6;margin-top:3px}
 .info strong{display:block;color:#fff}
+.info a{color:#7fe0d6;font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .form{background:#fff;color:var(--ink);border-radius:var(--r);padding:clamp(24px,4vw,36px);box-shadow:0 30px 60px rgba(0,0,0,.2)}
 .form h3{font-size:1.35rem;margin-bottom:6px}.form>p{color:var(--muted);font-size:.95rem;margin-bottom:20px}
 .form label{display:block;font-weight:700;font-size:.88rem;margin:14px 0 6px;color:var(--deep)}
@@ -115,13 +142,18 @@ section{padding:clamp(64px,9vw,110px) 0}
 .form .btn{width:100%;margin-top:22px}
 .form small{display:block;text-align:center;color:var(--muted);margin-top:12px}
 @media(max-width:860px){.contato__grid{grid-template-columns:1fr}}
-footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size:.88rem}
-.ft__in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+/* footer */
+footer.ft{background:#0b2f36;color:rgba(230,244,243,.65);padding:30px 0;font-size:.88rem}
+.ft__in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px}
+.ft__rt strong{color:#fff}
+.ft__links{display:flex;gap:18px;flex-wrap:wrap}
+.ft__links a{color:#7fe0d6;font-weight:600}
+.ft__links a:hover{text-decoration:underline}
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.45);animation:pulse 2.4s infinite}
 .wa-float svg{width:32px;height:32px;color:#fff}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.on{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.wa-float,.float{animation:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.wa-float,.float{animation:none}html{scroll-behavior:auto}.photo img{transition:none}}
 </style>
 </head>
 <body>
@@ -129,6 +161,8 @@ footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.3 23.7l6.2-1.6a11.8 11.8 0 0 0 5.6 1.4h.1A11.8 11.8 0 0 0 20.5 3.5zM12.2 21.4a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3.3 3.3 0 0 0-1 2.4 5.8 5.8 0 0 0 1.2 3.1 13.3 13.3 0 0 0 5.1 4.5c1.9.8 2.6.9 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.8-.4z"/></symbol>
   <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 3c-1.6 0-2.6.7-3.6.7C7 3.7 6 3 4.8 3.4 2.9 4 2.3 6.3 2.8 8.7c.4 2 1.3 3.2 1.8 5.3.6 2.6.9 6.5 2.6 6.9 1.6.4 2-2.4 2.5-4.3.3-1.1.8-2 2.3-2s2 .9 2.3 2c.5 1.9.9 4.7 2.5 4.3 1.7-.4 2-4.3 2.6-6.9.5-2.1 1.4-3.3 1.8-5.3.5-2.4-.1-4.7-2-5.3C18 3 17 3.7 15.6 3.7c-1 0-2-.7-3.6-.7z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 8.2l1.1 2.3 2.5.3-1.8 1.7.5 2.5L12 13.8l-2.3 1.2.5-2.5-1.8-1.7 2.5-.3z" fill="currentColor"/></symbol>
 </svg>
 
 <header class="hdr">
@@ -148,7 +182,7 @@ footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size
 <section class="hero">
   <div class="container hero__grid">
     <div class="rv">
-      <span class="eyebrow">Clínica odontológica</span>
+      <span class="eyebrow">Odontologia humanizada</span>
       <h1>Seu sorriso merece <em>cuidado de verdade</em>.</h1>
       <p class="lede">Na Essence Oral você é atendido com calma, carinho e tecnologia — do check-up ao sorriso dos sonhos. Agende sua avaliação em poucos cliques pelo WhatsApp.</p>
       <div class="hero__cta">
@@ -158,26 +192,8 @@ footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size
       <div class="trust"><span><i></i>Atendimento humanizado</span><span><i></i>Plano de tratamento claro</span><span><i></i>Agenda rápida</span></div>
     </div>
     <div class="hero__media rv">
-      <div class="art">
-        <svg viewBox="0 0 480 560" role="img" aria-label="Ilustração de um dente brilhante com escova">
-          <defs>
-            <linearGradient id="hb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9efe8"/><stop offset="1" stop-color="#8fd6cc"/></linearGradient>
-            <linearGradient id="tt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3f3f1"/></linearGradient>
-          </defs>
-          <rect width="480" height="560" fill="url(#hb)"/>
-          <circle cx="380" cy="110" r="120" fill="#fff" opacity=".35"/>
-          <circle cx="80" cy="470" r="140" fill="#1a9e9a" opacity=".18"/>
-          <ellipse cx="240" cy="470" rx="150" ry="22" fill="#0f3d46" opacity=".12"/>
-          <g transform="translate(90 90) scale(12.5)"><use href="#i-tooth" fill="url(#tt)" stroke="#0f3d46" stroke-width=".35"/></g>
-          <path d="M175 175 q20 -30 55 -32" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round" opacity=".9"/>
-          <circle cx="205" cy="265" r="9" fill="#0f3d46"/><circle cx="275" cy="265" r="9" fill="#0f3d46"/>
-          <circle cx="202" cy="262" r="3" fill="#fff"/><circle cx="272" cy="262" r="3" fill="#fff"/>
-          <path d="M215 298 q25 24 50 0" stroke="#0f3d46" stroke-width="7" fill="none" stroke-linecap="round"/>
-          <ellipse cx="185" cy="292" rx="14" ry="8" fill="#ff9fb0" opacity=".6"/><ellipse cx="295" cy="292" rx="14" ry="8" fill="#ff9fb0" opacity=".6"/>
-          <g transform="rotate(-35 380 360)"><rect x="330" y="350" width="150" height="20" rx="10" fill="#1a9e9a"/><rect x="330" y="322" width="46" height="30" rx="6" fill="#fff" stroke="#0f3d46" stroke-width="3"/><path d="M336 322v-12M346 322v-14M356 322v-12M366 322v-14" stroke="#7fe0d6" stroke-width="5" stroke-linecap="round"/></g>
-          <g fill="#fff"><path d="M110 150l6 16 16 6-16 6-6 16-6-16-16-6 16-6z"/><path d="M395 250l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/><path d="M370 440l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" opacity=".8"/></g>
-          <g fill="#fff" opacity=".7"><circle cx="100" cy="330" r="10"/><circle cx="125" cy="360" r="6"/><circle cx="405" cy="170" r="7"/></g>
-        </svg>
+      <div class="photo">
+        <img src="img/recepcao.jpg" alt="Recepção da Essence Oral com balcão de mármore, painel de madeira e poltronas de espera" width="1200" height="1600" fetchpriority="high">
       </div>
       <div class="float float--a"><span class="float__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></span><div>Atendimento<small>com carinho e calma</small></div></div>
       <div class="float float--b"><span class="float__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span><div>Agenda fácil<small>direto no WhatsApp</small></div></div>
@@ -203,37 +219,36 @@ footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size
 
 <section class="sobre" id="sobre">
   <div class="container sobre__grid">
-    <div class="art rv">
-      <svg viewBox="0 0 520 460" role="img" aria-label="Ilustração de consultório odontológico">
-        <rect width="520" height="460" fill="#e9f6f3"/>
-        <rect y="330" width="520" height="130" fill="#d4ece7"/>
-        <rect x="330" y="60" width="140" height="170" rx="16" fill="#fff" stroke="#0f3d46" stroke-width="4"/>
-        <path d="M400 60v170M330 145h140" stroke="#0f3d46" stroke-width="4"/>
-        <circle cx="365" cy="100" r="16" fill="#ffe7a8"/>
-        <path d="M90 95h120" stroke="#0f3d46" stroke-width="5" stroke-linecap="round"/>
-        <path d="M150 95v40" stroke="#0f3d46" stroke-width="5"/>
-        <ellipse cx="150" cy="148" rx="46" ry="18" fill="#fff" stroke="#0f3d46" stroke-width="4"/>
-        <path d="M110 162 l-30 90 M190 162 l30 90" stroke="#fff3c4" stroke-width="30" opacity=".5"/>
-        <path d="M120 250 q10 -60 70 -60 h60 q30 0 40 30 l20 60 h70 q20 0 20 20 v10 q0 15 -15 15 h-200 q-80 0 -95 -75z" fill="#1a9e9a" stroke="#0f3d46" stroke-width="5" stroke-linejoin="round"/>
-        <rect x="210" y="325" width="30" height="55" fill="#0f3d46"/>
-        <rect x="160" y="378" width="140" height="18" rx="9" fill="#0f3d46"/>
-        <rect x="40" y="260" width="60" height="110" rx="12" fill="#fff" stroke="#0f3d46" stroke-width="4"/>
-        <path d="M70 260 v-30 q0 -20 20 -20" stroke="#0f3d46" stroke-width="4" fill="none"/>
-        <g transform="translate(430 250)"><rect x="-22" y="40" width="44" height="60" rx="8" fill="#ff9e7a" stroke="#0f3d46" stroke-width="4"/><ellipse cx="-12" cy="10" rx="18" ry="34" fill="#6ccf8f" stroke="#0f3d46" stroke-width="4" transform="rotate(-20)"/><ellipse cx="14" cy="0" rx="16" ry="32" fill="#4fb57a" stroke="#0f3d46" stroke-width="4" transform="rotate(20)"/></g>
-      </svg>
+    <div class="photo rv">
+      <img src="img/atendimento.jpg" alt="Atendimento em consultório da Essence Oral" width="1200" height="1600" loading="lazy">
     </div>
     <div class="rv">
       <span class="eyebrow">A clínica</span>
       <h2>Um espaço pensado para você se sentir bem</h2>
       <p class="lede">A Essence Oral nasceu para tornar a ida ao dentista uma experiência leve. Explicamos cada etapa do tratamento, respeitamos seu tempo e cuidamos de você como gostaríamos de ser cuidados.</p>
       <ul class="checks"><li>Avaliação completa e plano de tratamento claro</li><li>Ambiente acolhedor, limpo e confortável</li><li>Agendamento rápido pelo WhatsApp</li></ul>
+      <div class="rt">
+        <div class="rt__av" aria-hidden="true">EC</div>
+        <div class="rt__txt">
+          <small>Responsável técnica</small>
+          <strong>Dra. Elane Cardoso</strong>
+          <span>CRO-BA 5558</span>
+        </div>
+        <a class="btn btn--ghost js-ig" href="#" target="_blank" rel="noopener"><svg><use href="#i-user"/></svg>Instagram</a>
+      </div>
     </div>
   </div>
-  <div class="container gal">
-    <div class="art rv"><svg viewBox="0 0 200 200" role="img" aria-label="Sorriso"><rect width="200" height="200" fill="#c9efe8"/><path d="M45 90 q55 70 110 0 z" fill="#fff" stroke="#0f3d46" stroke-width="5" stroke-linejoin="round"/><path d="M70 95v18M100 95v24M130 95v18" stroke="#d9ecea" stroke-width="4"/><path d="M150 45l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#fff"/></svg></div>
-    <div class="art rv"><svg viewBox="0 0 200 200" role="img" aria-label="Escova e fio dental"><rect width="200" height="200" fill="#fbe9d8"/><g transform="rotate(-30 100 100)"><rect x="40" y="95" width="120" height="16" rx="8" fill="#1a9e9a"/><rect x="40" y="72" width="36" height="24" rx="5" fill="#fff" stroke="#0f3d46" stroke-width="4"/></g><rect x="120" y="120" width="44" height="44" rx="10" fill="#fff" stroke="#0f3d46" stroke-width="4"/><circle cx="142" cy="142" r="8" fill="#7fe0d6"/></svg></div>
-    <div class="art rv"><svg viewBox="0 0 200 200" role="img" aria-label="Agenda"><rect width="200" height="200" fill="#dff5f1"/><rect x="45" y="50" width="110" height="105" rx="14" fill="#fff" stroke="#0f3d46" stroke-width="5"/><path d="M45 82h110M75 40v22M125 40v22" stroke="#0f3d46" stroke-width="5" stroke-linecap="round"/><path d="M78 118l14 14 28-30" stroke="#1a9e9a" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div class="art rv"><svg viewBox="0 0 200 200" role="img" aria-label="Dente protegido"><rect width="200" height="200" fill="#e7e2fb"/><path d="M100 35 l55 20 v40 q0 45 -55 70 q-55 -25 -55 -70 v-40z" fill="#fff" stroke="#0f3d46" stroke-width="5" stroke-linejoin="round"/><g transform="translate(76 68) scale(2)"><use href="#i-tooth" fill="#1a9e9a"/></g></svg></div>
+
+  <div class="container">
+    <div class="gal__head rv">
+      <h3>Conheça nosso espaço</h3>
+      <p>Toque nas fotos para ampliar.</p>
+    </div>
+    <div class="gal">
+      <button type="button" class="photo rv" data-full="img/frase.jpg"><img src="img/frase.jpg" alt="Sala de espera com a frase “Sorrisos são como abraços invisíveis”" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="photo rv" data-full="img/consultorio.jpg"><img src="img/consultorio.jpg" alt="Consultório com cadeira odontológica, espelho e iluminação natural" width="1200" height="1600" loading="lazy"></button>
+      <button type="button" class="photo rv" data-full="img/corredor.jpg"><img src="img/corredor.jpg" alt="Corredor da clínica com painel de madeira e frase na parede" width="1200" height="1600" loading="lazy"></button>
+    </div>
   </div>
 </section>
 
@@ -246,10 +261,17 @@ footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size
       <article class="card rv"><div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Transparência</h3><p>Você entende cada etapa e sabe exatamente o que será feito antes de começar.</p></article>
       <article class="card rv"><div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div><h3>Segurança e higiene</h3><p>Protocolos rigorosos de esterilização e materiais de qualidade em cada procedimento.</p></article>
     </div>
-    <div class="gcard rv">
-      <div class="gcard__logo"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></svg></div>
-      <div><strong>Veja o que nossos pacientes dizem</strong><span>Confira as avaliações da Essence Oral no Google.</span></div>
-      <a class="btn btn--ghost js-google" href="#" target="_blank" rel="noopener">Ver avaliações</a>
+    <div class="gwrap">
+      <div class="gcard rv">
+        <div class="gcard__logo"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></svg></div>
+        <div><strong>Veja o que nossos pacientes dizem</strong><span>Confira as avaliações da Essence Oral no Google.</span></div>
+        <a class="btn btn--ghost js-google" href="#" target="_blank" rel="noopener">Ver avaliações</a>
+      </div>
+      <div class="gcard rv" id="pesquisa">
+        <div class="gcard__logo"><svg><use href="#i-chat"/></svg></div>
+        <div><strong>Já é nosso paciente?</strong><span>Responda nossa pesquisa de satisfação. Leva menos de 1 minuto e nos ajuda a cuidar ainda melhor de você.</span></div>
+        <a class="btn btn--wa js-nps" href="#" target="_blank" rel="noopener" style="background:var(--teal);box-shadow:0 12px 28px rgba(26,158,154,.3)">Responder pesquisa</a>
+      </div>
     </div>
   </div>
 </section>
@@ -288,7 +310,8 @@ footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size
       <div class="info">
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Localização</strong>Peça nossa localização pelo WhatsApp e te enviamos na hora.</div></div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Horários</strong>Atendimento com hora marcada. Escolha o melhor horário pelo WhatsApp.</div></div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#i-wa"/></svg><div><strong>Resposta rápida</strong>Nossa equipe responde e confirma seu agendamento.</div></div>
+        <div><svg><use href="#i-wa"/></svg><div><strong>Resposta rápida</strong>Nossa equipe responde e confirma seu agendamento.</div></div>
+        <div><svg><use href="#i-user"/></svg><div><strong>Instagram</strong><a class="js-ig" href="#" target="_blank" rel="noopener">@dra.elane_essenceoral</a></div></div>
       </div>
     </div>
     <form class="form rv" id="leadForm">
@@ -307,32 +330,62 @@ footer.ft{background:#0b2f36;color:rgba(230,244,243,.6);padding:28px 0;font-size
 
 <footer class="ft">
   <div class="container ft__in">
-    <span>© <span id="ano"></span> Essence Oral — Clínica Odontológica</span>
-    <span>Cuidando do seu sorriso com carinho.</span>
+    <span>© <span id="ano"></span> Essence Oral — Odontologia Humanizada</span>
+    <span class="ft__rt">Responsável Técnica: <strong>Dra. Elane Cardoso — CRO-BA 5558</strong></span>
+    <span class="ft__links"><a class="js-ig" href="#" target="_blank" rel="noopener">Instagram</a><a class="js-nps" href="#" target="_blank" rel="noopener">Pesquisa de satisfação</a></span>
   </div>
 </footer>
 
 <a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
+<dialog class="lb" id="lb" aria-label="Foto ampliada">
+  <img id="lbImg" alt="">
+  <button class="lb__x" type="button" aria-label="Fechar">×</button>
+</dialog>
+
 <script>
 /* ✏️ CONFIGURAÇÃO — edite só aqui */
 const CONFIG = {
-  whatsapp: "5500000000000",   // DDI + DDD + número, só números. Ex: 5511987654321
+  whatsapp: "5500000000000",   // DDI + DDD + número, só números. Ex: 5571987654321
   mensagem: "Olá! Vim pelo site da Essence Oral e gostaria de agendar uma avaliação.",
-  google: "https://www.google.com/search?q=Essence+Oral+cl%C3%ADnica+odontol%C3%B3gica"  // troque pelo link das avaliações no Google
+  google: "https://www.google.com/search?q=Essence+Oral+cl%C3%ADnica+odontol%C3%B3gica",  // troque pelo link das avaliações no Google
+  instagram: "https://www.instagram.com/dra.elane_essenceoral/",
+  nps: "https://docs.google.com/forms/d/e/1FAIpQLScv_FmWAj040f8v2GVy7a0SAswsP2RcdQrLW-U1aYVeKUqbLw/viewform?vc=0&c=0&w=1&flr=0"
 };
 const wa = t => "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(t);
-document.querySelectorAll(".js-wa").forEach(a => a.href = wa(CONFIG.mensagem));
-document.querySelectorAll(".js-google").forEach(a => a.href = CONFIG.google);
+const setHref = (sel, url) => document.querySelectorAll(sel).forEach(a => a.href = url);
+setHref(".js-wa", wa(CONFIG.mensagem));
+setHref(".js-google", CONFIG.google);
+setHref(".js-ig", CONFIG.instagram);
+setHref(".js-nps", CONFIG.nps);
 document.getElementById("ano").textContent = new Date().getFullYear();
+
 document.getElementById("leadForm").addEventListener("submit", e => {
   e.preventDefault();
   const nome = document.getElementById("nome").value.trim(), trat = document.getElementById("trat").value;
   window.open(wa("Olá! Meu nome é " + nome + ". Tenho interesse em: " + trat + ". Vim pelo site da Essence Oral."), "_blank", "noopener");
 });
+
+/* menu mobile */
 const nav = document.getElementById("nav"), burger = document.getElementById("burger");
 burger.addEventListener("click", () => burger.setAttribute("aria-expanded", nav.classList.toggle("open")));
 nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { nav.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+
+/* fotos: se alguma não carregar, mostra o fundo em vez do ícone quebrado */
+document.querySelectorAll(".photo img").forEach(i => {
+  if (i.complete && !i.naturalWidth) i.classList.add("off");
+  i.addEventListener("error", () => i.classList.add("off"));
+});
+
+/* galeria ampliada */
+const lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg");
+document.querySelectorAll("[data-full]").forEach(b => b.addEventListener("click", () => {
+  lbImg.src = b.dataset.full; lbImg.alt = b.querySelector("img").alt;
+  if (lb.showModal) lb.showModal(); else window.open(b.dataset.full, "_blank");
+}));
+lb.addEventListener("click", e => { if (e.target === lb || e.target.classList.contains("lb__x")) lb.close(); });
+
+/* animação de entrada */
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("on"); io.unobserve(x.target); } }), { threshold: .12 });
   document.querySelectorAll(".rv").forEach(el => io.observe(el));
